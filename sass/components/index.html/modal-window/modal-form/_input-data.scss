@@ -1,0 +1,35 @@
+
+// Input name, tel and email 
+
+.input-data {
+    display: block;
+    width: 448px;
+    height: 40px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  
+    &:focus,
+    &:not(:placeholder-shown) {
+      outline: none;
+      border-color: $secondary-color;
+    }
+  }
+
+// Input comments
+
+  .comments {
+    &-data {
+      width: 448px;
+      height: 120px;
+      padding: 10px 16px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+      resize: none;
+      &:focus,
+      &:not(:placeholder-shown) {
+        outline: none;
+        border-color: $secondary-color;
+      }
+    }
+  }

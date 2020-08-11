@@ -1,0 +1,5 @@
+.gallery {
+    @extend %container;
+    @extend %vertical-paddings;
+    @extend %flex-box;
+  }

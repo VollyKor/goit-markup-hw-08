@@ -1,0 +1,79 @@
+//  tooltip name, mail, tel
+
+.form-input {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.input {
+  &-tooltip {
+    left: 42px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 14px;
+    line-height: 1.07;
+    color: $primary-grey-color;
+
+    position: absolute;
+    z-index: 2;
+
+    @include transition(transform, color, font-size);
+  }
+
+  &-data:focus ~ &-tooltip,
+  &-data:not(:placeholder-shown) ~ &-tooltip {
+    transform: translate(-24px, -36px);
+    color: $secondary-color;
+    font-size: 12px;
+  }
+}
+
+//  tooltip-comments
+
+.form-comments {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.comments-tooltip {
+  top: 12px;
+  left: 16px;
+
+  position: absolute;
+  z-index: 2;
+
+  @include transition(transform, color, font-size);
+}
+
+.comments {
+  &-data:focus ~ &-tooltip,
+  &-data:not(:placeholder-shown) ~ &-tooltip {
+    transform: translateY(-36px);
+    color: $secondary-color;
+    font-size: 12px;
+  }
+}
+
+//  tooltip icons
+
+.input {
+  &-icon {
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+
+    width: 18px;
+    height: 18px;
+
+    fill: $primary-black-color;
+
+    position: absolute;
+    z-index: 2;
+  }
+
+  &-data:focus ~ &-icon,
+  &-data:not(:placeholder-shown) ~ &-icon {
+    fill: $secondary-color;
+  }
+}

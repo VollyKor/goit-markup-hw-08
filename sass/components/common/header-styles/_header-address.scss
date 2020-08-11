@@ -1,0 +1,45 @@
+.header-address {
+    @extend %flex-box;
+    margin-left: auto;
+  }
+
+.address-list {
+    @extend %flex-box;
+    margin-left: auto;
+  
+    & > li + li {
+      margin-left: 30px;
+    }
+  
+    & > li:hover {
+      color: $secondary-color;
+    }
+  }
+  
+.address-item {
+    @extend %flex-box;
+  
+    color: $primary-grey-color;
+    fill: $primary-grey-color;
+  
+    padding-top: 32px;
+    padding-bottom: 32px;
+  
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  
+    @include transition(color, fill);
+  
+    & > svg {
+      margin-right: 10px;
+    }
+  
+    &:hover,
+    &:focus {
+      color: $secondary-color;
+      fill: $secondary-color;
+    }
+  }
+  

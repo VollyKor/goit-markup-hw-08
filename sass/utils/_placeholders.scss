@@ -1,0 +1,47 @@
+%flex-box {
+  display: flex;
+  align-items: center;
+}
+
+%vertical-paddings {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+%auto-margins {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%container {
+  width: 1200px;
+  @extend %auto-margins;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+%section-title {
+  margin-bottom: 50px;
+
+  color: $primary-black-color;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+%social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+%footer-subtitle {
+  display: block;
+  margin-bottom: 20px;
+
+  color: $primary-white-color;
+
+  font-weight: 700;
+  text-transform: uppercase;
+}
