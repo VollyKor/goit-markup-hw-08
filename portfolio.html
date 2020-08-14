@@ -12,59 +12,79 @@
   </head>
   <body>
     <!-- Шапка с главной страницы -->
-    <header class="border-buttom">
-      <div class="header">
-        <nav class="header-nav">
+    <header class="header">   
+      <div class="container"> 
+          
           <a href="./index.html" class="header-logo" aria-label="Логотип">
             <span>
               Web
             </span>
             Studio
           </a>
-          <ul class="nav-list">
-            <li>
+   
+          <button           
+            class="nav-btn" 
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            data-menu-button>
+            <svg 
+              class="nav-icon" 
+              width="40" 
+              height="40" 
+              aria-label="Переключатель мобильного меню">
+              
+              <use class="icon-cross" href="./images/sprite.svg#menu-cross"></use>
+              <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+            </svg>
+          </button>      
+          <div class="nav-menu">
+            <nav class="nav-header">   
+              <ul class="nav-list">
+            <li class="nav-item">
               <a class="nav-link" href="./index.html">
-                <p>Студия</p>
+                <span>Студия</span>
               </a>
             </li>
-            <li>
+            <li class="nav-item">
               <a class="nav-link current-page" href="./portfolio.html">
                 <p>Портфолио</p>
               </a>
             </li>
-            <li>
+            <li class="nav-item">
               <a class="nav-link" href="">
                 <p>Контакты</p>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <address class="header-address">
-          <ul class="address-list">
-            <li>
-              <a class="address-item" href="mailto:info@devstudio.com">
-                <svg width="16px" height="11px">
-                  <use href="./images/sprite.svg#mail"></use>
-                </svg>
-                <p>info@devstudio.com</p>
-              </a>
-            </li>
-            <li>
-              <a class="address-item" href="tel:+380961111111">
-                <svg width="10px" height="14px">
-                  <use href="./images/sprite.svg#smartphone"></use>
-                </svg>
-                <p>+38 096 111 11 11</p>
-              </a>
-            </li>
-          </ul>
-        </address>
-      </div>
+            </a>
+          </li>
+              </ul>
+            </nav> 
+              <address class="header-address">
+                <ul class="address-list">
+                  <li class="address-item">
+                    <a class="address-link" href="mailto:info@devstudio.com">
+                      <svg width="16px" height="11px">
+                        <use href="./images/sprite.svg#mail"></use>
+                      </svg>
+                      <p>info@devstudio.com</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="address-link" href="tel:+380961111111">
+                      <svg width="10px" height="14px">
+                        <use href="./images/sprite.svg#smartphone"></use>
+                      </svg>
+                      <p>+38 096 111 11 11</p>
+                    </a>
+                  </li>
+                </ul>
+                  </address> 
+            
+          </div>
     </header>
 
     <!-- Основной раздел -->
     <main class="gallery">
-      <section class="gallery-section">
+      <section class="gallery-section container">
         <h1 class="gallery-title" hidden>Галерея</h1>
         <ul class="gallery-selection">
           <li>
@@ -98,10 +118,19 @@
             <a class="gallery-link" href="">
               <div class="gallery-overlay">
                 <img
-                  src="./images/technocrack.jpg"
+                class=" gallery-img"
+                srcset="
+                ./images/technocrack-354.jpg 354w,
+                ./images/technocrack-532.jpg 532w,
+                ./images/technocrack-708.jpg 708w"
+                  src="./images/technocrack-354.jpg"
                   alt="Иконка компании Технокряк"
-                  width="370"
-                  height="294"
+                  sizes="
+                  (min-width: 1200px) 30vw,
+                  (min-width: 769px) 50vw, 
+                  (min-width: 481px) 75vw,
+                  (max-width: 480px) 100vw
+                  " 
                 />
                 <p class="gallery-text">
                   Технокряк это современная площадка распространения
@@ -120,10 +149,19 @@
             <a class="gallery-link" href="">
               <div class="gallery-overlay">
                 <img
-                  src="./images/new-orlean-vs-golden-star.jpg"
+                class=" gallery-img"
+                srcset="
+                ./images/new-orlean-vs-golden-star-354.jpg 354w,
+                ./images/new-orlean-vs-golden-star-532.jpg 532w,
+                ./images/new-orlean-vs-golden-star-708.jpg 708w"
+                  src="./images/new-orlean-vs-golden-star-354.jpg"
                   alt="Постер с баскетболистами"
-                  width="370"
-                  height="294"
+                  sizes="
+                  (min-width: 1200px) 30vw,
+                  (min-width: 769px) 50vw, 
+                  (min-width: 481px) 75vw,
+                  (max-width: 480px) 100vw
+                  " 
                 />
                 <p class="gallery-text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -143,13 +181,25 @@
           </li>
           <li class="gallery-item">
             <a class="gallery-link" href="">
-              <div class="gallery-overlay">
-                <img
-                  src="./images/seafood.jpg"
+              <div class="gallery-overlay thumb">
+                
+                  <img
+                class="gallery-img"
+                srcset="
+                ./images/seafood-354.jpg 354w,
+                ./images/seafood-532.jpg 532w,
+                ./images/seafood-708.jpg 708w
+                "
+                  src="./images/seafood-354.jpg"
                   alt="Логотип приложения seafood"
-                  width="370"
-                  height="294"
+                  sizes="
+                  (min-width: 1200px) 30vw,
+                  (min-width: 769px) 50vw, 
+                  (min-width: 481px) 75vw,
+                  (max-width: 480px) 100vw
+                  " 
                 />
+                
                 <p class="gallery-text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Corporis, dolorem obcaecati. Quibusdam corporis qui
@@ -170,10 +220,20 @@
             <a class="gallery-link" href="">
               <div class="gallery-overlay">
                 <img
-                  src="./images/project-prime.jpg"
+                class=" gallery-img"
+                srcset="
+                ./images/project-prime-354.jpg 354w,
+                ./images/project-prime-532.jpg 532w,
+                ./images/project-prime-708.jpg 708w
+                "
+                  src="./images/project-prime-354.jpg"
                   alt="Наушники"
-                  width="370"
-                  height="294"
+                  sizes="
+                  (min-width: 1200px) 30vw,
+                  (min-width: 769px) 50vw, 
+                  (min-width: 481px) 75vw,
+                  (max-width: 480px) 100vw
+                  " 
                 />
                 <p class="gallery-text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -195,10 +255,20 @@
             <a class="gallery-link" href="">
               <div class="gallery-overlay">
                 <img
-                  src="./images/project-boxes.jpg"
+                class=" gallery-img"
+                srcset="
+                ./images/project-boxes-354.jpg 354w,
+                ./images/project-boxes-532.jpg 532w,
+                ./images/project-boxes-708.jpg 708w
+                "
+                  src="./images/project-boxes-354.jpg"
                   alt="Несколько коробок"
-                  width="370"
-                  height="294"
+                  sizes="
+                  (min-width: 1200px) 30vw,
+                  (min-width: 769px) 50vw, 
+                  (min-width: 481px) 75vw,
+                  (max-width: 480px) 100vw
+                  " 
                 />
                 <p class="gallery-text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -221,10 +291,20 @@
               <div class="gallery-overlay">
                 <!-- картинка с основной страницы -->
                 <img
-                  src="./images/design-solutions.jpg"
+                class=" gallery-img"
+                srcset="
+                ./images/design-solutions-354.jpg 354w,
+                ./images/design-solutions-532.jpg 532w,
+                ./images/design-solutions-708.jpg 708w
+                "
+                  src="./images/design-solutions-354.jpg"
                   alt="Монитор"
-                  width="370"
-                  height="294"
+                  sizes="
+                  (min-width: 1200px) 30vw,
+                  (min-width: 769px) 50vw, 
+                  (min-width: 481px) 75vw,
+                  (max-width: 480px) 100vw
+                  " 
                 />
                 <p class="gallery-text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -245,10 +325,20 @@
             <a class="gallery-link" href="">
               <div class="gallery-overlay">
                 <img
-                  src="./images/magazine-limited-edition.jpg"
+                class=" gallery-img"
+                srcset="
+                ./images/magazine-limited-edition-354.jpg 354w,
+                ./images/magazine-limited-edition-532.jpg 532w,
+                ./images/magazine-limited-edition-708.jpg 708w
+                "
+                  src="./images/magazine-limited-edition-354.jpg"
                   alt="Журнал"
-                  width="370"
-                  height="294"
+                  sizes="
+                  (min-width: 1200px) 30vw,
+                  (min-width: 769px) 50vw, 
+                  (min-width: 481px) 75vw,
+                  (max-width: 480px) 100vw
+                  " 
                 />
                 <p class="gallery-text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -270,10 +360,20 @@
             <a class="gallery-link" href="">
               <div class="gallery-overlay">
                 <img
-                  src="./images/project-lab.jpg"
+                class=" gallery-img"
+                srcset="
+                ./images/project-lab-354.jpg 354w,
+                ./images/project-lab-532.jpg 532w,
+                ./images/project-lab-708.jpg 708w
+                "
+                  src="./images/project-lab-354.jpg"
                   alt="Бирка"
-                  width="370"
-                  height="294"
+                  sizes="
+                  (min-width: 1200px) 30vw,
+                  (min-width: 769px) 50vw, 
+                  (min-width: 481px) 75vw,
+                  (max-width: 480px) 100vw
+                  " 
                 />
                 <p class="gallery-text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -296,10 +396,20 @@
               <!-- картинка с основной страницы -->
               <div class="gallery-overlay">
                 <img
-                  src="./images/desktop-applications.jpg"
+                class=" gallery-img"
+                srcset="
+                ./images/desktop-applications-354.jpg 354w,
+                ./images/desktop-applications-532.jpg 532w,
+                ./images/desktop-applications-708.jpg 708w
+                "
+                  src="./images/desktop-applications-354.jpg"
                   alt="Ноутбук"
-                  width="370"
-                  height="294"
+                  sizes="
+                  (min-width: 1200px) 30vw,
+                  (min-width: 769px) 50vw, 
+                  (min-width: 481px) 75vw,
+                  (max-width: 480px) 100vw
+                  "
                 />
                 <p class="gallery-text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -321,7 +431,7 @@
     <!-- футер с главной страницы -->
 
     <footer class="footer">
-      <div class="footer-wrapper">
+      <div class="footer-wrapper container">
         <!-- контакты -->
         <div class="footer-contacts">
           <a
@@ -403,19 +513,22 @@
             <label class="subscribe-lebel">
               <input
                 class="subscribe-field"
-                type="text"
+                type="email"
                 name="subscribe"
                 placeholder=" "
                 autocomplete="email"
               />
               <span class="subscribe-tooltip">E-mail</span>
             </label>
-            <button class="subscribe-button" type="button">
+            <button class="subscribe-button" type="button" name="subscribe">
               <span class="subscribe-button-text">Подписаться</span>
             </button>
           </div>
         </form>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
+
+

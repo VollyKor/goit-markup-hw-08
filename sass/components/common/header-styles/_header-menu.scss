@@ -1,0 +1,84 @@
+.header-logo {
+  display: block;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+
+  color: $full-black-color;
+
+  & > span {
+    color: $secondary-color;
+  }
+}
+
+.nav-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  padding: 60px 0px;
+  border: 1px solid $header-border-color;
+
+  // opacity: 0;
+
+  text-align: center;
+
+  background-color: $primary-white-color;
+}
+
+.nav-btn ~ .nav-menu {
+  display: none;
+  // @include transition(opacity);
+  // pointer-events: none;
+}
+
+.nav-btn.is-open ~ .nav-menu {
+  display: block;
+  z-index: 2;
+  // opacity: 1;
+  // pointer-events: all;
+}
+
+.nav-btn {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  & .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+}
+
+.icon {
+  &-cross,
+  &-menu {
+    fill: $primary-black-color;
+  }
+  .nav-btn:focus &-cross,
+  .nav-btn:focus &-menu,
+  .nav-btn:hover &-cross,
+  .nav-btn:hover &-menu {
+    fill: $secondary-color;
+  }
+}
+// .icon-menu:hover,
+// .icon-menu:focus,
+// .icon-cross:hover,
+// .icon-cross:hover {
+//     fill: $secondary-color;
+// }

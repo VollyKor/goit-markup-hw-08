@@ -1,5 +1,5 @@
 .footer-social {
-    margin-right: 94px;
+    // margin-right: 94px;
   
     &-subtitle {
       @extend %footer-subtitle;
@@ -8,6 +8,8 @@
   
     &-list {
       @extend %flex-box;
+      justify-content: center;
+      margin-bottom: 60px;
     }
   
     &-item:not(:last-child) {

@@ -1,43 +1,50 @@
-// 
+//
 // Section Clients
 
 .clients {
-  @extend %container;
-  @extend %vertical-paddings;
-
+  // @extend %container;
+  // @extend %vertical-paddings;
   &-title {
-    @extend %section-title;
+    margin-bottom: 30px;
+
+    color: $primary-black-color;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
   }
 
   &-list {
     @extend %flex-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px;
   }
 
-  &-item:not(:last-child) {
-    margin-right: 30px;
+  &-item {
+    width: calc(100% / 2 - 30px);
+    margin: 15px;
   }
 }
 
 .clients-link {
+  height: 90px;
 
-    width: 170px;
-    height: 90px;
+  fill: $secondary-grey-color;
 
-    fill: $secondary-grey-color;
+  border: 1px solid $secondary-grey-color;
+  border-radius: 4px;
 
-    border: 1px solid $secondary-grey-color;
-    border-radius: 4px;
+  @extend %flex-box;
+  justify-content: center;
 
-    @extend %flex-box;
-    justify-content: center;
+  @include transition(fill, border-color);
 
-    @include transition(fill, border-color);
-
-    &:hover,
-    &:focus {
-      fill: $secondary-color;
-      border-color: $secondary-color;
-      outline: none     ;
-    }
+  &:hover,
+  &:focus {
+    fill: $secondary-color;
+    border-color: $secondary-color;
+    outline: none;
   }
-
+}

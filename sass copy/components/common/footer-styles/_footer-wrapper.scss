@@ -1,0 +1,13 @@
+.footer {
+    background-color: $secondary-background-color;
+  
+    &-wrapper {
+      // @extend %flex-box;
+      // @extend %container;
+  
+      align-items: baseline;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+  

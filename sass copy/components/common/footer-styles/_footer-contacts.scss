@@ -1,0 +1,38 @@
+.footer {
+    &-contacts {
+      margin-right: 69px;
+    }
+  
+    &-logo {
+      @extend %logo;
+      margin-bottom: 20px;
+      color: $primary-white-color;
+      }
+    
+    &-address {
+      &-link.city {
+      color: $primary-white-color;
+      }
+  
+      &-link.email,
+      &-link.tel {
+      color: $secondary-white-color;
+      }
+  
+      &-item:not(:last-child) {
+      margin-bottom: 9px;
+      }
+  
+      &-link{
+      padding: 0px;
+  
+          &:hover,
+          &:focus {
+          color: $secondary-color;
+          }
+      
+      @include transition (color);
+      }
+    }
+  }
+  

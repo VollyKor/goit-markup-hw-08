@@ -1,20 +1,30 @@
+.form-container {
+  display: block;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 4px;
+  background-color: $primary-white-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
 .form-title {
   display: block;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   color: $primary-black-color;
 }
 
 .flex-vertical {
+  width: 100%;
   @extend %flex-box;
   flex-direction: column;
 }
 
-.form-order {
-  margin-bottom: 40px;
-}
+// .form-order {
+//   margin-bottom: 40px;
+// }

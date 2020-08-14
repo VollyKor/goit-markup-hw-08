@@ -1,19 +1,30 @@
-.subscribe {
-    &-tooltip {
-      position: absolute;
-      top: 15px;
-      left: 16px;
+.subscribe-tooltip {
+  position: absolute;
+  top: 15px;
+  left: 16px;
 
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 16px;
-      line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.25;
 
-      @include transition(transform, color);
+  @include transition(transform, color,);
+}
+
+@media screen and (max-width: 599px) {
+  .subscribe {
+    &-field:focus + &-tooltip,
+    &-field:not(:placeholder-shown) + &-tooltip {
+      color: transparent;
     }
+  }
+}
 
-      &-field:focus + &-tooltip,
-      &-field:not(:placeholder-shown) + &-tooltip {
-        transform: translateX(-70px);
-        color: $primary-white-color;
-      }      
+@media screen and (min-width: 600px) {
+  .subscribe {
+    &-field:focus + &-tooltip,
+    &-field:not(:placeholder-shown) + &-tooltip {
+      color: $primary-white-color;
+      transform: translateX(-70px);
     }
+  }
+}

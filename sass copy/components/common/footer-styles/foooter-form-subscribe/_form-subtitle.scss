@@ -1,0 +1,14 @@
+.subscribe {
+    &-subtitle {
+      display: block;
+      @extend %footer-subtitle;
+    }
+
+    &-wrapper {
+      @extend %flex-box;
+    }
+
+    &-lebel {
+      position: relative;
+    }
+  }

@@ -32,16 +32,17 @@
       margin-bottom: 30px;
     }
   
-    &-link {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.71;
-      text-decoration-line: underline;
-  
-      color: $secondary-color;
-    }
     &-description {
-      line-height: 1.15;
+      font-size: 12px;
+      line-height: 1.17;
       letter-spacing: 0.01em;
+    }
+
+    &-link {
+      // font-weight: 400;
+      // font-size: 14px;
+      // line-height: 1.71;
+      text-decoration-line: underline;
+      color: $secondary-color;
     }
   }

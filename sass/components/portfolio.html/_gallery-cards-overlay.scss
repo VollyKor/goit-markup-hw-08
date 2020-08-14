@@ -11,8 +11,9 @@
     left: 0;
     z-index: 2;
   
-    width: 370px;
-    height: 294px;
+    width: 100%;
+    height: 100%;
+
     padding: 63px 24px;
   
     color: $primary-white-color;
@@ -28,5 +29,5 @@
     &-link:hover &-text,
     &-link:focus &-text {
     transform: translateY(-100%);
-    }
+    }    
   }

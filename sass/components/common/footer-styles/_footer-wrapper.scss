@@ -2,12 +2,9 @@
     background-color: $secondary-background-color;
   
     &-wrapper {
-      @extend %flex-box;
-      @extend %container;
-  
+      // @extend %flex-box;
+      // @extend %container;
+  text-align: center;
       align-items: baseline;
-      padding-top: 60px;
-      padding-bottom: 60px;
     }
   }
-  

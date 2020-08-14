@@ -1,14 +1,21 @@
 .gallery-selection {
+    display: flex;
+    flex-wrap: wrap;
     & > li:not(:last-child) {
       margin-right: 8px;
     }
-    @extend %flex-box;
-    justify-content: center;
-    margin-bottom: 50px;
+
+    & > li {
+        margin-bottom: 15px;
+    }
+
+    // @extend %flex-box;
+    // justify-content: center;
+    margin-bottom: 25px;
   }
   
   .gallery-button {
-    padding: 6px 12px;
+    padding: 6px 22px;
     border: 0px;
     border-radius: 4px;
   

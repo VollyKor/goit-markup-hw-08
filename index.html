@@ -12,57 +12,78 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
     /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
-    <title>Домашняя работа 7</title>
+    <title>Домашняя работа 8</title>
   </head>
 
   <body>
-    <!-- Шапка -->
-    <header class="header">
-      <nav class="header-nav">
-        <a href="./index.html" class="header-logo" aria-label="Логотип">
-          <span>
-            Web
-          </span>
-          Studio
-        </a>
-        <ul class="nav-list">
-          <li>
-            <a class="nav-link current-page" href="./index.html">
-              <p>Студия</p>
+    <header class="header">   
+      <div class="container"> 
+          
+          <a href="./index.html" class="header-logo" aria-label="Логотип">
+            <span>
+              Web
+            </span>
+            Studio
+          </a>
+   
+          <button           
+            class="nav-btn" 
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            data-menu-button>
+            <svg 
+              class="nav-icon" 
+              width="40" 
+              height="40" 
+              aria-label="Переключатель мобильного меню">
+              
+              <use class="icon-cross" href="./images/sprite.svg#menu-cross"></use>
+              <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+            </svg>
+          </button>      
+          <div class="nav-menu">
+            <nav class="nav-header">   
+              <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link current-page" href="./index.html">
+                <span>Студия</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./portfolio.html">
+                <p>Портфолио</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">
+                <p>Контакты</p>
             </a>
           </li>
-          <li>
-            <a class="nav-link" href="./portfolio.html">
-              <p>Портфолио</p>
-            </a>
-          </li>
-          <li>
-            <a class="nav-link" href="">
-              <p>Контакты</p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <address class="header-address">
-        <ul class="address-list">
-          <li>
-            <a class="address-item" href="mailto:info@devstudio.com">
-              <svg width="16px" height="11px">
-                <use href="./images/sprite.svg#mail"></use>
-              </svg>
-              <p>info@devstudio.com</p>
-            </a>
-          </li>
-          <li>
-            <a class="address-item" href="tel:+380961111111">
-              <svg width="10px" height="14px">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              <p>+38 096 111 11 11</p>
-            </a>
-          </li>
-        </ul>
-      </address>
+              </ul>
+            </nav> 
+              <address class="header-address">
+                <ul class="address-list">
+                  <li class="address-item">
+                    <a class="address-link" href="mailto:info@devstudio.com">
+                      <svg width="16px" height="11px">
+                        <use href="./images/sprite.svg#mail"></use>
+                      </svg>
+                      <p>info@devstudio.com</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="address-link" href="tel:+380961111111">
+                      <svg width="10px" height="14px">
+                        <use href="./images/sprite.svg#smartphone"></use>
+                      </svg>
+                      <p>+38 096 111 11 11</p>
+                    </a>
+                  </li>
+                </ul>
+                  </address> 
+            
+          </div>
     </header>
 
     <!-- Мейн -->
@@ -71,7 +92,7 @@
       <section class="hero">
         <h1 class="hero-title">
           Эффективные решения
-          <br />
+          <br/>
           для вашего бизнеса
         </h1>
         <button class="button-order" data-modal-open type="button">
@@ -80,28 +101,29 @@
       </section>
 
       <!-- Особенности -->
-      <section class="features">
+      <section class="features container">
         <h2 class="features-title">Особенности</h2>
         <ul class="features-list">
           <li class="features-item">
             <h3 class="features-subtitle icon-antenna">
               Внимание к деталям
             </h3>
-            <p>
+            <p class="features-subscribe">
               Идейные соображения, а также начало повседневной работы по
               формированию позиции.
             </p>
           </li>
           <li class="features-item">
             <h3 class="features-subtitle icon-clock">Пунктуальность</h3>
-            <p>
+            <p  class="features-subscribe"
+            <p > 
               Задача организации, в особенности же рамки и место обучения кадров
               влечет за собой.
             </p>
           </li>
           <li class="features-item">
             <h3 class="features-subtitle icon-diagram">Планирование</h3>
-            <p>
+            <p class="features-subscribe">
               Равным образом консультация с широким активом в значительной
               степени обуславливает.
             </p>
@@ -110,7 +132,7 @@
             <h3 class="features-subtitle icon-astronaut">
               Современные технологии
             </h3>
-            <p>
+            <p class="features-subscribe">
               Значимость этих проблем настолько очевидна, что реализация
               плановых заданий.
             </p>
@@ -119,7 +141,7 @@
       </section>
 
       <!-- Чем мы занимаемся -->
-      <section class="specialization">
+      <section class="specialization container">
         <h2 class="specialization-title">Чем мы занимаемся</h2>
         <!-- как я понял, эти картинки, это ссылки на страницу порфолио с фильтром по категориям -->
         <ul class="specialization-list">
@@ -161,15 +183,26 @@
 
       <!-- Наша команда -->
       <section class="team">
-        <div class="team-section">
+        <div class="team-section container">
           <h2 class="team-title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-card">
               <img
-                src="./images/photo-nikolay-kucherenko.jpg"
-                alt="фото Николай Кучеренко"
-                width="270"
-                height="260"
+                class="team-photo"
+                srcset="
+                ./images/photo-nikolay-kucherenko-450.jpg 450w,
+                ./images/photo-nikolay-kucherenko-675.jpg 675w,
+                ./images/photo-nikolay-kucherenko-900.jpg 900w
+                "
+                src="./images/photo-nikolay-kucherenko-450.jpg"
+                alt="фото Николай Кучеренко"  
+
+                sizes="
+                (min-width: 1200px) 20vw,
+                (min-width: 769px) 50vw, 
+                (min-width: 481px) 75vw,
+                (max-width: 480px) 100vw
+                "            
               />
               <div class="bio">
                 <h3 class="bio-name">Николай Кучеренко</h3>
@@ -209,10 +242,21 @@
 
             <li class="team-card">
               <img
-                src="./images/photo-olga-ivanova.jpg"
-                alt="фото Ольга Иванова"
-                width="270"
-                height="260"
+              class="team-photo"
+                srcset="
+                ./images/photo-olga-ivanova-450.jpg 450w,
+                ./images/photo-olga-ivanova-675.jpg 675w,
+                ./images/photo-olga-ivanova-900.jpg 900w
+                "
+                src="./images/photo-olga-ivanova-450.jpg"
+                alt="фото Ольга Иванова"  
+                                           
+                sizes="
+                (min-width: 1200px) 20vw,
+                (min-width: 769px) 50vw, 
+                (min-width: 481px) 75vw,
+                (max-width: 480px) 100vw
+                "                                
               />
               <div class="bio">
                 <h3 class="bio-name">Ольга Иванова</h3>
@@ -252,10 +296,21 @@
 
             <li class="team-card">
               <img
-                src="./images/photo-andrey-shevchenko.jpg"
-                alt="фото Андрей Шевченко"
-                width="270"
-                height="260"
+              class="team-photo"
+                srcset="
+                ./images/photo-andrey-shevchenko-450.jpg 450w,
+                ./images/photo-andrey-shevchenko-675.jpg 675w,
+                ./images/photo-andrey-shevchenko-900.jpg 900w
+                "
+                src="./images/photo-andrey-shevchenko-450.jpg"
+                alt="фото Андрей Шевченко"  
+                                           
+                sizes="
+                (min-width: 1200px) 20vw,
+                (min-width: 769px) 50vw, 
+                (min-width: 481px) 75vw,
+                (max-width: 480px) 100vw
+                "
               />
               <div class="bio">
                 <h3 class="bio-name">Андрей Шевченко</h3>
@@ -295,11 +350,24 @@
 
             <li class="team-card">
               <img
-                src="./images/photo-ivan-nikolaev.jpg"
+              class="team-photo"
+                
+                srcset="
+                ./images/photo-ivan-nikolaev-450.jpg 450w,
+                ./images/photo-ivan-nikolaev-675.jpg 675w,
+                ./images/photo-ivan-nikolaev-900.jpg 900w
+                "
+                src="./images/photo-ivan-nikolaev-450.jpg"
                 alt="фото Иван Николаев"
-                width="270"
-                height="260"
+                                           
+                sizes="
+                (min-width: 1200px) 20vw,
+                (min-width: 769px) 50vw, 
+                (min-width: 481px) 75vw,
+                (max-width: 480px) 100vw
+                "
               />
+              
               <div class="bio">
                 <h3 class="bio-name">Иван Николаев</h3>
                 <p class="bio-proffesion" lang="eu">UI Designer</p>
@@ -340,7 +408,7 @@
       </section>
 
       <!-- Постоянные клиенты -->
-      <section class="clients">
+      <section class="clients container">
         <h2 class="clients-title">Постоянные клиенты</h2>
         <ul class="clients-list">
           <li class="clients-item">
@@ -392,7 +460,7 @@
     <!-- футер -->
 
     <footer class="footer">
-      <div class="footer-wrapper">
+      <div class="footer-wrapper container">
         <!-- контакты -->
         <div class="footer-contacts">
           <a
@@ -474,14 +542,14 @@
             <label class="subscribe-lebel">
               <input
                 class="subscribe-field"
-                type="text"
+                type="email"
                 name="subscribe"
                 placeholder=" "
                 autocomplete="email"
               />
               <span class="subscribe-tooltip">E-mail</span>
             </label>
-            <button class="subscribe-button" type="button">
+            <button class="subscribe-button" type="button" name="subscribe">
               <span class="subscribe-button-text">Подписаться</span>
             </button>
           </div>
@@ -492,17 +560,17 @@
     <!-- Бекдроп -->
 
     <div class="modal-backdrop is-hidden" data-modal>
-      <div class="modal-window">
+      <div class="modal-window form-container">
         <button class="modal-close" data-modal-close>
           <svg class="modal-close-icon">
             <use href="./images/sprite.svg#close"></use>
           </svg>
         </button>
 
-        <form class="form-order">
+        <form class="form-order" >
           <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
 
-          <div class="flex-vertical" role="group">
+          <div class="flex-vertical" role="group" hidden>
             <label class="form-input">
               <input
                 class="input-data"
@@ -571,6 +639,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

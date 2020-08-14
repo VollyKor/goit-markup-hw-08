@@ -1,15 +1,28 @@
 .footer {
+    
     &-contacts {
-      margin-right: 69px;
+        margin-bottom: 60px;
+    //   margin-right: 69px;
     }
-  
+
     &-logo {
-      @extend %logo;
+        display: block;
+      
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.17;
+
       margin-bottom: 20px;
       color: $primary-white-color;
+      
+      & > span {
+              color: $secondary-color;
+            }
       }
+    }
     
-    &-address {
+    .footer-address {
       &-link.city {
       color: $primary-white-color;
       }
@@ -20,7 +33,7 @@
       }
   
       &-item:not(:last-child) {
-      margin-bottom: 9px;
+      margin-bottom: 8px;
       }
   
       &-link{
@@ -34,5 +47,4 @@
       @include transition (color);
       }
     }
-  }
   

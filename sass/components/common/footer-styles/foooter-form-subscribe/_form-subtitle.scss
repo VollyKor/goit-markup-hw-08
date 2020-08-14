@@ -4,11 +4,13 @@
       @extend %footer-subtitle;
     }
 
-    &-wrapper {
-      @extend %flex-box;
-    }
+    // &-wrapper {
+    //   // @extend %flex-box;
+    // }
 
     &-lebel {
+      display: block;
       position: relative;
+      margin-bottom: 20px;
     }
   }
