@@ -1,6 +1,0 @@
-.is-hidden {
-    opacity: 1;
-    pointer-events: none;
-    transform: scale(0);
-    @include transition (scale 1s);
-}

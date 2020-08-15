@@ -1,17 +1,20 @@
 .gallery-selection {
     display: flex;
     flex-wrap: wrap;
+
+    margin-bottom: 25px;
+
     & > li:not(:last-child) {
       margin-right: 8px;
     }
 
     & > li {
         margin-bottom: 15px;
+    }    
+        
+    @media screen and (min-width: 768px) {
+      justify-content: center;
     }
-
-    // @extend %flex-box;
-    // justify-content: center;
-    margin-bottom: 25px;
   }
   
   .gallery-button {

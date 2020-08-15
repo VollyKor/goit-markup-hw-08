@@ -1320,6 +1320,12 @@ svg {
   margin-bottom: 15px;
 }
 
+@media screen and (min-width: 768px) {
+  .gallery-selection {
+    justify-content: center;
+  }
+}
+
 .gallery-button {
   padding: 6px 22px;
   border: 0px;
