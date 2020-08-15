@@ -773,6 +773,12 @@ svg {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+  }
+}
+
 .button-order {
   padding: 10px 32px;
   color: #ffffff;
