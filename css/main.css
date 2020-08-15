@@ -776,6 +776,7 @@ svg {
 @media screen and (min-width: 1200px) {
   .hero-title {
     font-size: 44px;
+    line-height: 1.36;
   }
 }
 
