@@ -1,12 +1,17 @@
 .footer {
     &-contacts {
       margin-right: 69px;
+      @media screen and (min-width: 1200px){
+        margin-bottom: 0px;
+      }
     }
   
     &-logo {
       @extend %logo;
       margin-bottom: 20px;
       color: $primary-white-color;
+
+      
       }
     
     &-address {

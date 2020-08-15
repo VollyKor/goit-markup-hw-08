@@ -16,7 +16,7 @@
   </head>
 
   <body>
-    <header class="header">   
+    <header class="header no-border">   
       <div class="container"> 
           
           <a href="./index.html" class="header-logo" aria-label="Логотип">
@@ -147,34 +147,62 @@
         <ul class="specialization-list">
           <li class="specialization-item">
             <a class="specialization-link" href="">
-              <img
+              <picture>
+                <source 
+                srcset="
+                ./images/desktop-applications.webp,
+                ./images/desktop-applications@2x.webp 2x
+                "
+                />
+
+                <img                            
+                srcset="./images/desktop-applications@2x.jpg 2x"
                 src="./images/desktop-applications.jpg"
                 alt="Десктопные приложения "
                 width="370"
                 height="294"
               />
+              </picture>
               <span class="specialization-desc">Десктопные приложения</span>
             </a>
           </li>
           <li class="specialization-item">
             <a class="specialization-link" href="">
+              <picture>
+                <source 
+                srcset="
+                ./images/mobile-applications.webp,
+                ./images/mobile-applications@2x.webp 2x
+                "
+                />
               <img
+                srcset="./images/mobile-applications@2x.jpg 2x"
                 src="./images/mobile-applications.jpg"
                 alt="Мобильные приложения"
                 width="370"
                 height="294"
               />
+              </picture>
               <span class="specialization-desc">Мобильные приложения</span>
             </a>
           </li>
           <li class="specialization-item">
             <a class="specialization-link" href="">
-              <img
-                src="./images/design-solutions.jpg"
-                alt="Дизайнерские решения"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source 
+                  srcset="
+                  ./images/design-solutions.webp,
+                  ./images/design-solutions@2x.webp 2x
+                  "
+                />
+                <img
+                  srcset="./images/design-solutions@2x.jpg 2x"
+                  src="./images/design-solutions.jpg"
+                  alt="Дизайнерские решения"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <span class="specialization-desc">Дизайнерские решения</span>
             </a>
           </li>
@@ -190,11 +218,11 @@
               <img
                 class="team-photo"
                 srcset="
-                ./images/photo-nikolay-kucherenko-450.jpg 450w,
-                ./images/photo-nikolay-kucherenko-675.jpg 675w,
-                ./images/photo-nikolay-kucherenko-900.jpg 900w
+                ./images/photo-nikolay-kucherenko-270.jpg 270w,
+                ./images/photo-nikolay-kucherenko-405.jpg 405w,
+                ./images/photo-nikolay-kucherenko-540.jpg 540w
                 "
-                src="./images/photo-nikolay-kucherenko-450.jpg"
+                src="./images/photo-nikolay-kucherenko-270.jpg"
                 alt="фото Николай Кучеренко"  
 
                 sizes="
@@ -244,11 +272,11 @@
               <img
               class="team-photo"
                 srcset="
-                ./images/photo-olga-ivanova-450.jpg 450w,
-                ./images/photo-olga-ivanova-675.jpg 675w,
-                ./images/photo-olga-ivanova-900.jpg 900w
+                ./images/photo-olga-ivanova-270.jpg 270w,
+                ./images/photo-olga-ivanova-405.jpg 405w,
+                ./images/photo-olga-ivanova-540.jpg 540w
                 "
-                src="./images/photo-olga-ivanova-450.jpg"
+                src="./images/photo-olga-ivanova-270.jpg"
                 alt="фото Ольга Иванова"  
                                            
                 sizes="
@@ -298,11 +326,11 @@
               <img
               class="team-photo"
                 srcset="
-                ./images/photo-andrey-shevchenko-450.jpg 450w,
-                ./images/photo-andrey-shevchenko-675.jpg 675w,
-                ./images/photo-andrey-shevchenko-900.jpg 900w
+                ./images/photo-andrey-shevchenko-270.jpg 270w,
+                ./images/photo-andrey-shevchenko-405.jpg 405w,
+                ./images/photo-andrey-shevchenko-540.jpg 540w
                 "
-                src="./images/photo-andrey-shevchenko-450.jpg"
+                src="./images/photo-andrey-shevchenko-270.jpg"
                 alt="фото Андрей Шевченко"  
                                            
                 sizes="
@@ -353,11 +381,11 @@
               class="team-photo"
                 
                 srcset="
-                ./images/photo-ivan-nikolaev-450.jpg 450w,
-                ./images/photo-ivan-nikolaev-675.jpg 675w,
-                ./images/photo-ivan-nikolaev-900.jpg 900w
+                ./images/photo-ivan-nikolaev-270.jpg 270w,
+                ./images/photo-ivan-nikolaev-405.jpg 405w,
+                ./images/photo-ivan-nikolaev-540.jpg 540w
                 "
-                src="./images/photo-ivan-nikolaev-450.jpg"
+                src="./images/photo-ivan-nikolaev-270.jpg"
                 alt="фото Иван Николаев"
                                            
                 sizes="
@@ -462,75 +490,77 @@
     <footer class="footer">
       <div class="footer-wrapper container">
         <!-- контакты -->
-        <div class="footer-contacts">
-          <a
-            class="footer-logo"
-            href="./index.html"
-            aria-label="Логотип Веб студии"
-          >
-            <span>Web</span>
-            Studio
-          </a>
-          <address class="footer-address">
-            <ul class="footer-address-list">
-              <li class="footer-address-item">
-                <a
-                  class="footer-address-link city"
-                  href="https://goo.gl/maps/y2QhBPSRQjRxSZP76"
-                  target="_blank"
-                >
-                  г. Киев, пр-т Леси Украинки, 26
+        <div class="flex-wrapper">
+          <div class="footer-contacts">
+            <a
+              class="footer-logo"
+              href="./index.html"
+              aria-label="Логотип Веб студии"
+            >
+              <span>Web</span>
+              Studio
+            </a>
+            <address class="footer-address">
+              <ul class="footer-address-list">
+                <li class="footer-address-item">
+                  <a
+                    class="footer-address-link city"
+                    href="https://goo.gl/maps/y2QhBPSRQjRxSZP76"
+                    target="_blank"
+                  >
+                    г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+                <li class="footer-address-item">
+                  <a
+                    class="footer-address-link email"
+                    href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer-address-item">
+                  <a class="footer-address-link tel" href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+  
+          <!-- Соц. ссылки -->
+          <div class="footer-social">
+            <b class="footer-social-subtitle">Присоединяйтесь</b>
+            <ul class="footer-social-list">
+              <li class="footer-social-item">
+                <a class="footer-social-link" href="">
+                  <svg class="footer-social-icon">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="footer-address-item">
-                <a
-                  class="footer-address-link email"
-                  href="mailto:info@example.com"
-                  >info@example.com</a
-                >
+              <li class="footer-social-item">
+                <a class="footer-social-link" href="">
+                  <svg class="footer-social-icon">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-address-item">
-                <a class="footer-address-link tel" href="tel:+380991111111"
-                  >+38 099 111 11 11</a
-                >
+              <li class="footer-social-item">
+                <a class="footer-social-link" href="">
+                  <svg class="footer-social-icon">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a class="footer-social-link" href="">
+                  <svg class="footer-social-icon">
+                    <use href="./images/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-
-        <!-- Соц. ссылки -->
-        <div class="footer-social">
-          <b class="footer-social-subtitle">Присоединяйтесь</b>
-          <ul class="footer-social-list">
-            <li class="footer-social-item">
-              <a class="footer-social-link" href="">
-                <svg class="footer-social-icon">
-                  <use href="./images/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="footer-social-link" href="">
-                <svg class="footer-social-icon">
-                  <use href="./images/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="footer-social-link" href="">
-                <svg class="footer-social-icon">
-                  <use href="./images/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="footer-social-link" href="">
-                <svg class="footer-social-icon">
-                  <use href="./images/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <!-- Форма подпишись -->

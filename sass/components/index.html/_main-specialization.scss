@@ -1,3 +1,59 @@
+// 
+/* Section  specialization */
+
 .specialization {
+    padding-top: 0px;
     display: none;
-}
+
+    @media screen and (min-width: 1200px) {
+    display: block;
+    }
+  
+    &-title {
+      @extend %section-title;
+    }
+  
+    &-title {
+      margin-bottom: 50px;
+    }
+  
+    &-list {
+      display: flex;
+    }
+  
+    &-item {
+      position: relative;
+    }
+  
+    &-item + &-item {
+      margin-left: 30px;
+    }
+  
+    &-link {
+      font-size: 0px;
+      display: block;
+    }
+  }
+  
+  // Description above card
+  
+  .specialization-desc {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+  
+      width: 370px;
+      padding-top: 27px;
+      padding-bottom: 27px;
+  
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.17;
+      text-align: center;
+      text-transform: uppercase;
+  
+      color: $primary-white-color;
+      background-color: $background-description-color;
+    }
+  
+  

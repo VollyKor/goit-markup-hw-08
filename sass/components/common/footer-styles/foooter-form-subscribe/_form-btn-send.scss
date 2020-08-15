@@ -1,6 +1,6 @@
 .subscribe-button {
+  display: block;
     padding: 10px 29px;
-
     @extend %auto-margins;
 
     color: $primary-white-color;

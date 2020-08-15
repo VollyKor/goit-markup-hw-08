@@ -11,10 +11,22 @@
   & > span {
     color: $secondary-color;
   }
+
+  @media screen and (min-width: 768px) {
+    min-width: 141px;
+    margin-right: 81px;
+  }
+}
+
+.nav-header {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: flex-end;
+  }
 }
 
 .nav-menu {
-  display: block;
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -23,18 +35,32 @@
   padding: 60px 0px;
   border: 1px solid $header-border-color;
 
-  // opacity: 0;
+  @media screen and (min-width: 768px) {
+    border: none;
+    position: static;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0;
+  }
 
   text-align: center;
-
   background-color: $primary-white-color;
-}
 
-.nav-btn ~ .nav-menu {
-  display: none;
-  // @include transition(opacity);
-  // pointer-events: none;
+  & .nav-item:not(:last-child) {
+    @media screen and (min-width: 768px) {
+      margin-right: 50px;
+    }    
+  }
 }
+// Меню через opacity, проблема: tab проходит по скрытому контенту
+// .nav-menu {
+//   display: none;
+//   // @include transition(opacity);
+//   // pointer-events: none;
+//   @media screen and (min-width: 768px) {
+// }
+// }
 
 .nav-btn.is-open ~ .nav-menu {
   display: block;
@@ -62,6 +88,10 @@
   &.is-open .icon-menu {
     display: none;
   }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .icon {
@@ -76,9 +106,3 @@
     fill: $secondary-color;
   }
 }
-// .icon-menu:hover,
-// .icon-menu:focus,
-// .icon-cross:hover,
-// .icon-cross:hover {
-//     fill: $secondary-color;
-// }

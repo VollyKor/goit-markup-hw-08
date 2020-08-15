@@ -1,110 +1,116 @@
-//
-// Team section
-
 .team {
   background-color: $primary-background-color;
 
-  // &-section {
-  //   // @extend %container;
-  // }
-
   &-title {
-    margin-bottom: 30px;
-
-    color: $primary-black-color;
-
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.17;
-    text-align: center;
+    @extend %section-title;
   }
 
-  // &-list {
-  //   @extend %flex-box;
-  // }
+  &-list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+  }
 }
 
 // Team card
 
 .team-card {
   &:not(:last-child) {
-    margin-bottom: 30px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
-
   font-size: 0px;
   box-shadow: 
   0px 2px 1px rgba(0, 0, 0, 0.2), 
   0px 1px 1px rgba(0, 0, 0, 0.14),
   0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 4 * 30px) / 4);
+    margin: 15px;
+  }
 }
+
 .team-photo {
   width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  object-position: top;
+
+  @media screen and (min-width: 768px) {
+    max-height: 260px;  
+  }
+}
+.bio {
+  width: inherit;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  background-color: $primary-white-color;
+  border-radius: 0px 0px 4px 4px;
+
+  &-name {
+    margin-bottom: 10px;
+
+    color: $primary-black-color;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
   }
 
-.bio {
-    width: inherit;
-    padding-top: 30px;
-    padding-bottom: 24px;
-    padding-left: 24px;
-    padding-right: 24px;
-  
-    background-color: $primary-white-color;
-    border-radius: 0px 0px 4px 4px;
-  
-    &-name {
-      margin-bottom: 10px;
-  
-      color: $primary-black-color;
-  
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.19;
-      text-align: center;
-    }
-  
-    &-proffesion {
-      margin-bottom: 16px;
-  
-      font-size: 16px;
-      line-height: 1.19;
-      text-align: center;
-    }
+  &-proffesion {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
   }
+}
 
 // Social list
 
 .social-list {
-    @extend %flex-box;
-    justify-content: center;
+  @extend %flex-box;
+  justify-content: center;
 
-    & > li:not(:last-child) {
-      margin-right: 10px;
-    }
+  & > li:not(:last-child) {
+    margin-right: 10px;
   }
-  
-  .social-link {
-    display: block;
-    padding: 12px;
-    border-radius: 50%;
-  
-    fill: $secondary-grey-color;
-  
-    @include transition(fill, background-color);
-  
-    &:hover,
-    &:focus {
-      fill: $primary-white-color;
-      background-color: $secondary-color;
-      outline: none; 
-    }
-  
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
+}
+
+.social-link {
+  display: block;
+  padding: 12px;
+  border-radius: 50%;
+
+  fill: $secondary-grey-color;
+
+  @include transition(fill, background-color);
+
+  &:hover,
+  &:focus {
+    fill: $primary-white-color;
+    background-color: $secondary-color;
+    outline: none;
   }
-  
-  .social-icon {
-    @extend %social-icon;
+
+  &:not(:last-child) {
+    margin-right: 10px;
   }
-  
+}
+
+.social-icon {
+  @extend %social-icon;
+}

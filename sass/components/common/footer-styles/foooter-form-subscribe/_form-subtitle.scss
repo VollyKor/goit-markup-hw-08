@@ -4,13 +4,10 @@
       @extend %footer-subtitle;
     }
 
-    // &-wrapper {
-    //   // @extend %flex-box;
-    // }
-
-    &-lebel {
-      display: block;
-      position: relative;
-      margin-bottom: 20px;
-    }
+    &-wrapper {
+      @media screen  and (min-width:1200px){
+        display: flex;  
+        justify-content: space-between;
+      }      
+    }    
   }

@@ -1,60 +1,75 @@
 .features {
-    text-align: center;
-    // @extend %container;
-    // @extend %vertical-paddings;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+  &-title {
+    display: none;
+  }
 
-     // &-list {
-    // //   @extend %flex-box;
-    // }
-    
-    &-title {
-      display: none;
-    }
-  
-    &-item:not(:last-child) {
-      margin-bottom: 30px;
-    }
-  
-   
-
-    &-subscribe {
-        text-align: left;
+  &-list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
     }
   }
 
-  .features-subtitle {
-    margin-bottom: 10px;
+  &-item {
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px * 2) / 2);
+      margin: 15px;
+    }
 
-    color: $primary-black-color;
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 30px * 4) / 4);
+    }
+  }
+
+  &-item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-subscribe {
+    text-align: left;
+  }
   
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-  
+}
+
+.features-subtitle {
+  margin-bottom: 10px;
+
+  color: $primary-black-color;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
   // Features card with icon
-  
-    &::before {
-      content: "";
-      display: block;
-  
-      width: 100%;
-      height: 120px;
-  
-      background-color: $primary-background-color;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 4px;
-      margin-bottom: 30px;
-    }
+
+  &::before {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 120px;
+
+    background-color: $primary-background-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
   }
-  
-  // Generate icons 
-  
-  @each $icon-name in $features-icons {
-    .icon-#{$icon-name}::before {
-      content: "";
-      background-image: url(./../images/icon-#{$icon-name}.svg);
-    }
+}
+
+// Generate icons
+
+@each $icon-name in $features-icons {
+  .icon-#{$icon-name}::before {
+    content: "";
+    background-image: url(./../images/icon-#{$icon-name}.svg);
   }
-  
+}
