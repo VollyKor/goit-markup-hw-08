@@ -36,24 +36,24 @@
   }
 }
 
-.dots-hide {
-  @media screen and (min-width: 1200px), screen and (max-width: 767px) {
-    display: none;
-  }
-}
+// .dots-hide {
+//   @media screen and (min-width: 1200px), screen and (max-width: 767px) {
+//     display: none;
+//   }
+// }
 
-.text-hide {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-}
+// .text-hide {
+//   @media screen and (min-width: 768px) and (max-width: 1199px) {
+//     position: absolute;
+//     width: 1px;
+//     height: 1px;
+//     margin: -1px;
+//     border: 0;
+//     padding: 0;
+//     clip: rect(0 0 0 0);
+//     overflow: hidden;
+//   }
+// }
 
 // Gallery card position styles
 
@@ -87,11 +87,19 @@
     line-height: 2;
     letter-spacing: 0.06em;
   }
-
   &-subtitle {
     color: $primary-grey-color;
 
     font-size: 16px;
     line-height: 1.87;
   }
+}
+
+.truncate-text {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 304px;
+}
 }

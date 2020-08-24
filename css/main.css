@@ -1384,25 +1384,6 @@ svg {
   border-top: none;
 }
 
-@media screen and (min-width: 1200px), screen and (max-width: 767px) {
-  .dots-hide {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .text-hide {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-}
-
 .gallery-item {
   width: 100%;
   -webkit-transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1439,6 +1420,15 @@ svg {
   color: #757575;
   font-size: 16px;
   line-height: 1.87;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 304px;
+  }
 }
 
 .gallery-overlay {
