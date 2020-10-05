@@ -16,75 +16,71 @@
   </head>
 
   <body>
-    <header class="header no-border">   
-      <div class="container"> 
-          
-          <a href="./index.html" class="header-logo" aria-label="Логотип">
-            <span>
-              Web
-            </span>
-            Studio
-          </a>
-   
-          <button           
-            class="nav-btn" 
-            type="button"
-            aria-expanded="false"
-            aria-controls="nav-menu"
-            data-menu-button>
-            <svg 
-              class="nav-icon" 
-              width="40" 
-              height="40" 
-              aria-label="Переключатель мобильного меню">
-              
-              <use class="icon-cross" href="./images/sprite.svg#menu-cross"></use>
-              <use class="icon-menu" href="./images/sprite.svg#menu"></use>
-            </svg>
+    <header class="header no-border">
+      <div class="container">
+        <a href="./index.html" class="header-logo" aria-label="Логотип">
+          <span> Web </span>
+          Studio
+        </a>
 
-          </button>      
-          <div class="nav-menu" id="nav-menu">
-            <nav class="nav-header">   
-              <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-link current-page" href="./index.html">
-                <span>Студия</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./portfolio.html">
-                <p>Портфолио</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">
-                <p>Контакты</p>
-            </a>
-          </li>
-              </ul>
-            </nav> 
-              <address class="header-address">
-                <ul class="address-list">
-                  <li class="address-item">
-                    <a class="address-link" href="mailto:info@devstudio.com">
-                      <svg width="16px" height="11px">
-                        <use href="./images/sprite.svg#mail"></use>
-                      </svg>
-                      <p>info@devstudio.com</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="address-link" href="tel:+380961111111">
-                      <svg width="10px" height="14px">
-                        <use href="./images/sprite.svg#smartphone"></use>
-                      </svg>
-                      <p>+38 096 111 11 11</p>
-                    </a>
-                  </li>
-                </ul>
-                  </address> 
-            
-      </div>
+        <button
+          class="nav-btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          data-menu-button
+        >
+          <svg
+            class="nav-icon"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-cross" href="./images/sprite.svg#menu-cross"></use>
+            <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+          <nav class="nav-header">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a class="nav-link current-page" href="./index.html">
+                  <span>Студия</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./portfolio.html">
+                  <p>Портфолио</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">
+                  <p>Контакты</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <address class="header-address">
+            <ul class="address-list">
+              <li class="address-item">
+                <a class="address-link" href="mailto:info@devstudio.com">
+                  <svg width="16px" height="11px">
+                    <use href="./images/sprite.svg#mail"></use>
+                  </svg>
+                  <p>info@devstudio.com</p>
+                </a>
+              </li>
+              <li>
+                <a class="address-link" href="tel:+380961111111">
+                  <svg width="10px" height="14px">
+                    <use href="./images/sprite.svg#smartphone"></use>
+                  </svg>
+                  <p>+38 096 111 11 11</p>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
       </div>
     </header>
 
@@ -94,7 +90,7 @@
       <section class="hero">
         <h1 class="hero-title">
           Эффективные решения
-          <br/>
+          <br />
           для вашего бизнеса
         </h1>
         <button class="button-order" data-modal-open type="button">
@@ -107,9 +103,7 @@
         <h2 class="features-title">Особенности</h2>
         <ul class="features-list">
           <li class="features-item">
-            <h3 class="features-subtitle icon-antenna">
-              Внимание к деталям
-            </h3>
+            <h3 class="features-subtitle icon-antenna">Внимание к деталям</h3>
             <p class="features-subscribe">
               Идейные соображения, а также начало повседневной работы по
               формированию позиции.
@@ -117,7 +111,7 @@
           </li>
           <li class="features-item">
             <h3 class="features-subtitle icon-clock">Пунктуальность</h3>
-            <p  class="features-subscribe"> 
+            <p class="features-subscribe">
               Задача организации, в особенности же рамки и место обучения кадров
               влечет за собой.
             </p>
@@ -149,21 +143,22 @@
           <li class="specialization-item">
             <a class="specialization-link" href="">
               <picture>
-                <source 
-                srcset="
-                ./images/desktop-applications.webp 1x,
-                ./images/desktop-applications@2x.webp 2x
-                "
-                type="image/webp"
+                <source
+                  srcset="
+                    ./images/desktop-applications.webp    1x,
+                    ./images/desktop-applications@2x.webp 2x
+                  "
+                  type="image/webp"
                 />
 
-                <img                            
-                srcset="./images/desktop-applications@2x.jpg 2x"
-                src="./images/desktop-applications.jpg"
-                alt="Десктопные приложения "
-                width="370"
-                height="294"
-              />
+                <img
+                  loading="lazy"
+                  srcset="./images/desktop-applications@2x.jpg 2x"
+                  src="./images/desktop-applications.jpg"
+                  alt="Десктопные приложения "
+                  width="370"
+                  height="294"
+                />
               </picture>
               <span class="specialization-desc">Десктопные приложения</span>
             </a>
@@ -171,20 +166,21 @@
           <li class="specialization-item">
             <a class="specialization-link" href="">
               <picture>
-                <source 
-                srcset="
-                ./images/mobile-applications.webp 1x,
-                ./images/mobile-applications@2x.webp 2x
-                "
-                type="image/webp"
+                <source
+                  srcset="
+                    ./images/mobile-applications.webp    1x,
+                    ./images/mobile-applications@2x.webp 2x
+                  "
+                  type="image/webp"
                 />
-              <img
-                srcset="./images/mobile-applications@2x.jpg 2x"
-                src="./images/mobile-applications.jpg"
-                alt="Мобильные приложения"
-                width="370"
-                height="294"
-              />
+                <img
+                  loading="lazy"
+                  srcset="./images/mobile-applications@2x.jpg 2x"
+                  src="./images/mobile-applications.jpg"
+                  alt="Мобильные приложения"
+                  width="370"
+                  height="294"
+                />
               </picture>
               <span class="specialization-desc">Мобильные приложения</span>
             </a>
@@ -192,14 +188,15 @@
           <li class="specialization-item">
             <a class="specialization-link" href="">
               <picture>
-                <source 
+                <source
                   srcset="
-                  ./images/design-solutions.webp 1x,
-                  ./images/design-solutions@2x.webp 2x
+                    ./images/design-solutions.webp    1x,
+                    ./images/design-solutions@2x.webp 2x
                   "
                   type="image/webp"
                 />
                 <img
+                  loading="lazy"
                   srcset="./images/design-solutions@2x.jpg 2x"
                   src="./images/design-solutions.jpg"
                   alt="Дизайнерские решения"
@@ -220,21 +217,21 @@
           <ul class="team-list">
             <li class="team-card">
               <img
+                loading="lazy"
                 class="team-photo"
                 srcset="
-                ./images/photo-nikolay-kucherenko-270.jpg 270w,
-                ./images/photo-nikolay-kucherenko-405.jpg 405w,
-                ./images/photo-nikolay-kucherenko-540.jpg 540w
+                  ./images/photo-nikolay-kucherenko-270.jpg 270w,
+                  ./images/photo-nikolay-kucherenko-405.jpg 405w,
+                  ./images/photo-nikolay-kucherenko-540.jpg 540w
                 "
                 src="./images/photo-nikolay-kucherenko-270.jpg"
-                alt="фото Николай Кучеренко"  
-
+                alt="фото Николай Кучеренко"
                 sizes="
                 (min-width: 1200px) 20vw,
                 (min-width: 769px) 50vw, 
                 (min-width: 481px) 75vw,
                 (max-width: 480px) 100vw
-                "            
+                "
               />
               <div class="bio">
                 <h3 class="bio-name">Николай Кучеренко</h3>
@@ -274,21 +271,21 @@
 
             <li class="team-card">
               <img
-              class="team-photo"
+                loading="lazy"
+                class="team-photo"
                 srcset="
-                ./images/photo-olga-ivanova-270.jpg 270w,
-                ./images/photo-olga-ivanova-405.jpg 405w,
-                ./images/photo-olga-ivanova-540.jpg 540w
+                  ./images/photo-olga-ivanova-270.jpg 270w,
+                  ./images/photo-olga-ivanova-405.jpg 405w,
+                  ./images/photo-olga-ivanova-540.jpg 540w
                 "
                 src="./images/photo-olga-ivanova-270.jpg"
-                alt="фото Ольга Иванова"  
-                                           
+                alt="фото Ольга Иванова"
                 sizes="
                 (min-width: 1200px) 20vw,
                 (min-width: 769px) 50vw, 
                 (min-width: 481px) 75vw,
                 (max-width: 480px) 100vw
-                "                                
+                "
               />
               <div class="bio">
                 <h3 class="bio-name">Ольга Иванова</h3>
@@ -328,15 +325,15 @@
 
             <li class="team-card">
               <img
-              class="team-photo"
+                loading="lazy"
+                class="team-photo"
                 srcset="
-                ./images/photo-andrey-shevchenko-270.jpg 270w,
-                ./images/photo-andrey-shevchenko-405.jpg 405w,
-                ./images/photo-andrey-shevchenko-540.jpg 540w
+                  ./images/photo-andrey-shevchenko-270.jpg 270w,
+                  ./images/photo-andrey-shevchenko-405.jpg 405w,
+                  ./images/photo-andrey-shevchenko-540.jpg 540w
                 "
                 src="./images/photo-andrey-shevchenko-270.jpg"
-                alt="фото Андрей Шевченко"  
-                                           
+                alt="фото Андрей Шевченко"
                 sizes="
                 (min-width: 1200px) 20vw,
                 (min-width: 769px) 50vw, 
@@ -382,16 +379,15 @@
 
             <li class="team-card">
               <img
-              class="team-photo"
-                
+                loading="lazy"
+                class="team-photo"
                 srcset="
-                ./images/photo-ivan-nikolaev-270.jpg 270w,
-                ./images/photo-ivan-nikolaev-405.jpg 405w,
-                ./images/photo-ivan-nikolaev-540.jpg 540w
+                  ./images/photo-ivan-nikolaev-270.jpg 270w,
+                  ./images/photo-ivan-nikolaev-405.jpg 405w,
+                  ./images/photo-ivan-nikolaev-540.jpg 540w
                 "
                 src="./images/photo-ivan-nikolaev-270.jpg"
                 alt="фото Иван Николаев"
-                                           
                 sizes="
                 (min-width: 1200px) 20vw,
                 (min-width: 769px) 50vw, 
@@ -399,7 +395,7 @@
                 (max-width: 480px) 100vw
                 "
               />
-              
+
               <div class="bio">
                 <h3 class="bio-name">Иван Николаев</h3>
                 <p class="bio-proffesion" lang="eu">UI Designer</p>
@@ -530,7 +526,7 @@
               </ul>
             </address>
           </div>
-  
+
           <!-- Соц. ссылки -->
           <div class="footer-social">
             <b class="footer-social-subtitle">Присоединяйтесь</b>
@@ -569,9 +565,7 @@
 
         <!-- Форма подпишись -->
         <form class="form-subscribe">
-          <b class="subscribe-subtitle">
-            Подпишитесь на рассылку
-          </b>
+          <b class="subscribe-subtitle"> Подпишитесь на рассылку </b>
           <div class="subscribe-wrapper">
             <label class="subscribe-lebel">
               <input
@@ -601,7 +595,7 @@
           </svg>
         </button>
 
-        <form class="form-order" >
+        <form class="form-order">
           <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
 
           <div class="flex-vertical" role="group" hidden>
@@ -656,7 +650,7 @@
 
             <label class="license-agreement">
               <input
-                class="checkbox visually-hidden" 
+                class="checkbox visually-hidden"
                 value="true"
                 type="checkbox"
                 name="license-agree"
